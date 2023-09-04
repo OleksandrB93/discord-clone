@@ -3,12 +3,11 @@ import { redirect } from "next/navigation";
 import { ChannelType } from "@prisma/client";
 
 import { currentProfile } from "@/lib/currentProfile";
-// import { ChatHeader } from "@/components/chat/chat-header";
 import { ChatMessages } from "@/components/chat/ChatMessages";
-// import { MediaRoom } from "@/components/media-room";
 import { db } from "@/lib/db";
 import ChatHeader from "@/components/chat/ChatHeader";
 import { ChatInput } from "@/components/chat/ChatInput";
+import { MediaRoom } from "@/components/MediaRoom";
 
 interface ChannelIdPageProps {
   params: {
@@ -75,12 +74,12 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
           />
         </>
       )}
-      {/* {channel.type === ChannelType.AUDIO && (
+      {channel.type === ChannelType.AUDIO && (
         <MediaRoom chatId={channel.id} video={false} audio={true} />
       )}
       {channel.type === ChannelType.VIDEO && (
         <MediaRoom chatId={channel.id} video={true} audio={true} />
-      )} */}
+      )}
     </div>
   );
 };
