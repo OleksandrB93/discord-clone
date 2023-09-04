@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import  FileUpload  from "@/components/FileUpload";
+import { FileUpload } from "@/components/FileUpload";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/hooks/useModalStore";
 
@@ -135,5 +135,4 @@ export const CreateServerModal = () => {
   );
 };
 
-
-export default CreateServerModal
+export default CreateServerModal;
